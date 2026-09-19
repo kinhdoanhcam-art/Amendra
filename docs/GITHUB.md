@@ -14,7 +14,6 @@ Required directories:
 
 Required root files:
 
-- `.env.example`
 - `.gitignore`
 - `README.md`
 - `package.json`
@@ -34,4 +33,4 @@ Do not commit generated or local-only data:
 - `coverage/`, `__pycache__/`, `*.pyc`
 - ZIP archives and OS metadata
 
-Commit `.env.example`, but never commit a real `.env.local` or wallet secret.
+Never commit `.env.local` or wallet secrets.
