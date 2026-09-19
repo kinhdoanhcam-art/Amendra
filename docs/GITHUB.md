@@ -1,18 +1,19 @@
 # GitHub upload checklist
 
-Upload the repository root while preserving the directory structure.
+Upload the repository contents while preserving the directory structure.
 
-Required directories:
+## Include
 
-- `app/` — application interface
-- `components/` — reusable UI controls
-- `contract/` — GenLayer Intelligent Contract source
-- `docs/` — contract and testing documentation
-- `lib/` — shared utilities
-- `public/` — favicon and public assets
-- `reports/` — verification evidence
+Directories:
 
-Required root files:
+- `app/` — Next.js application and styles
+- `components/` — reusable interface controls
+- `contract/` — deployed GenLayer Intelligent Contract source
+- `docs/` — deployment, testing, and submission documentation
+- `lib/` — shared frontend utilities
+- `public/` — public assets
+
+Root files:
 
 - `.gitignore`
 - `README.md`
@@ -25,12 +26,13 @@ Required root files:
 - `eslint.config.mjs`
 - `tsconfig.json`
 
-Do not commit generated or local-only data:
+## Exclude
 
 - `node_modules/`
-- `.next/`, `out/`, `dist/`
-- `.env`, `.env.local`
-- `coverage/`, `__pycache__/`, `*.pyc`
-- ZIP archives and OS metadata
+- `.next/`, `out/`, `dist/`, `coverage/`
+- `.env`, `.env.local`, and other secret-bearing environment files
+- `__pycache__/`, `*.pyc`, logs, ZIP archives, and OS metadata
+- editor settings and local tool metadata
 
-Never commit `.env.local` or wallet secrets.
+Never commit wallet credentials, seed phrases, private keys, or deployment
+secrets. The public contract address in `app/page.tsx` is safe to commit.
