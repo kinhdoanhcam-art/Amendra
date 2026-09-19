@@ -39,7 +39,6 @@ through the live interface. Reads use the latest finalized state.
 ## Local development
 
 ```text
-cp .env.example .env.local
 pnpm dev
 pnpm build
 ```
