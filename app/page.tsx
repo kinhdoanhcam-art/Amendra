@@ -29,10 +29,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
 import { Toaster } from "@/components/ui/sonner";
 
-const CONTRACT_ADDRESS = (
-  process.env.NEXT_PUBLIC_CONTRACT_ADDRESS ??
-  "0x6518B4908588f40dE74C6B43f8bA4aB42131D327"
-) as `0x${string}`;
+const CONTRACT_ADDRESS = "0x6518B4908588f40dE74C6B43f8bA4aB42131D327" as const;
 const EXPLORER_URL = `https://explorer-studio.genlayer.com/address/${CONTRACT_ADDRESS}`;
 const RPC_URL = "https://studio.genlayer.com/api";
 const SOURCE_SHA = "f2c60f80d0994bcc0a3194d99b61868089295649e57bbe192ee32c7f8a2a0f53";
